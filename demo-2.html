@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo-2 | Cross Fading Images</title>
+    <style>
+        #cf{
+            position: relative;
+            width: 450px;
+            height: auto;
+            margin: 0 auto;
+        }
+        #cf img{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        #cf img.transparent{
+            opacity: 0;
+        }
+        #cf_onclick{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="cf" class="shadow">
+        <img src="images/railroad-tracks-1081952_1920.jpg" alt="Rail Road" class="bottom">
+        <img src="images/wave-1031216_1920.jpg" alt="Waves" class="top">
+    </div>
+    <p id="cf_onclick">Click me to toggle</p>
+    <script src="scripts/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#cf_onclick").click(function(){
+                $("#cf img.top").toggleClass("transparent");
+            });
+        });
+    </script>
+</body>
+</html>
