@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo-1 | Cross Fading Images</title>
+    <style>
+        #cf{
+            position: relative;
+            width: 450px;
+            height: auto;
+            margin: 0 auto;
+        }
+        #cf img{
+            position: absolute;
+            left: 0;
+            transition: opacity 1s ease-in-out;
+            width: 100%;
+            height: auto;
+        }
+        #cf img.top:hover{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="cf">
+        <img src="images/railroad-tracks-1081952_1920.jpg" alt="Rail Road" class="bottom">
+        <img src="images/wave-1031216_1920.jpg" alt="Waves" class="top">
+    </div>
+</body>
+</html>
